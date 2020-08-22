@@ -13,10 +13,21 @@
 using namespace std;
 
 int main(){
-  cin.tie(0);
-  ios::sync_with_stdio(false);
   
+  int n;
+  cin >> n;
+  ll a[n];
+  FOR(i,n) cin >> a[i];
 
+  ll ans=0;
+  FOR(i,n-1){
+    if(a[i] > a[i+1]){
+      ans += a[i] - a[i+1]; 
+      a[i+1] = a[i];
+    }
+  }
+
+  cout << ans << endl;
 
   return 0;
 }

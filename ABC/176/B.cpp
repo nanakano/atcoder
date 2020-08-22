@@ -3,7 +3,7 @@
 #include <iomanip>
 #include <iostream>
 #include <string>
-#define ll long long
+#define ull unsigned long long
 #define YES cout << "YES" << endl
 #define NO cout << "NO" << endl
 #define yes cout << "Yes" << endl
@@ -13,10 +13,19 @@
 using namespace std;
 
 int main(){
-  cin.tie(0);
-  ios::sync_with_stdio(false);
   
+  string n;
+  cin >> n;
+  
+  int sum=0;
 
+  FOR(i,n.size()){
+    if(n[i] != '0')
+      sum += n[i]; 
+  }
+
+  if(sum%9 == 0) yes;
+  else no;
 
   return 0;
 }

@@ -13,10 +13,18 @@
 using namespace std;
 
 int main(){
-  cin.tie(0);
-  ios::sync_with_stdio(false);
   
+  int n,x,t;
+  cin >> n >> x >> t;
 
+  int i=0;
+  int ans=t;
+  for(i=1; ;i++){
+    if(n <= x*i) break;
+    ans += t;
+  }
+
+  cout << ans << endl;
 
   return 0;
 }
