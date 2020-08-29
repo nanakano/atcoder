@@ -19,10 +19,8 @@ int main(){
   
   int sum=0;
 
-  FOR(i,n.size()){
-    if(n[i] != '0')
-      sum += n[i]; 
-  }
+  FOR(i,(int)n.size())
+    sum += n[i]-'0'; 
 
   if(sum%9 == 0) yes;
   else no;
