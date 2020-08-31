@@ -21,7 +21,22 @@ int main(){
   cin.tie(0);
   ios::sync_with_stdio(false);
   
-  int a; cin >> a;
+  int n,l; cin >> n >> l;
+  string a;
+  vector<string> s;
+  RIP(i,n) {
+    cin >> a;
+    s.push_back(a);
+  }
+
+  sort(s.begin(), s.end());
+
+  string ans;
+
+  RIP(i,n)
+    ans += s[i];
+
+  cout << ans << endl;
 
   return 0;
 }

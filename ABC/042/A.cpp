@@ -21,7 +21,21 @@ int main(){
   cin.tie(0);
   ios::sync_with_stdio(false);
   
-  int a; cin >> a;
+  int a,b,c; cin >> a >> b >> c;
+
+  int ans5 = 0;
+  int ans7 = 0;
+
+  if(a == 5) ans5++;
+  if(b == 5) ans5++;
+  if(c == 5) ans5++;
+
+  if(a == 7) ans7++;
+  if(b == 7) ans7++;
+  if(c == 7) ans7++;
+
+  if(ans5 == 2 and ans7 == 1) YES;
+  else NO;
 
   return 0;
 }
