@@ -21,7 +21,25 @@ int main(){
   cin.tie(0);
   ios::sync_with_stdio(false);
   
-  int a; cin >> a;
+  int n,k;
+  cin >> n >> k;
+  vector<int> d(n);
+  RIP(i,k){
+    int a;
+    cin >> a;
+    RIP(j, a){
+      int aa;
+      cin >> aa;
+      d[aa-1] = 1;
+    }
+  }
+
+  int ans=0;
+  RIP(i,n){
+    if(d[i] != 1) ans++;
+  }
+
+  cout << ans << endl;
 
   return 0;
 }
