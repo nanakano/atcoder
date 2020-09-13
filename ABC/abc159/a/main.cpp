@@ -21,7 +21,12 @@ int main(){
   cin.tie(0);
   ios::sync_with_stdio(false);
   
-  int a; cin >> a;
+  int n,m; 
+  cin >> n >> m;
+
+  int ans = n * (n-1) / 2+m*(m-1) / 2;
+
+  cout << ans << endl;
 
   return 0;
 }
