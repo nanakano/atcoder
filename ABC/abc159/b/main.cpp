@@ -21,7 +21,28 @@ int main(){
   cin.tie(0);
   ios::sync_with_stdio(false);
   
-  int a; cin >> a;
+  string S;
+  cin >> S;
+  string Sr, SS, SSr;
+
+  FOR(i, (S.size()+3)/2-1, S.size()){
+    SS.push_back(S[i]);
+  }
+
+  Sr = S;
+  SSr = SS;
+  reverse(Sr.begin(), Sr.end());
+  reverse(SSr.begin(), SSr.end());
+
+/*
+  cout << S << endl;
+  cout << Sr << endl;
+  cout << SS << endl;
+  cout << SSr << endl;
+*/
+  if(S == Sr && SS == SSr) yes;
+  else no;
+
 
   return 0;
 }
