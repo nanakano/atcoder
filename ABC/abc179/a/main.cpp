@@ -21,8 +21,15 @@ int main(){
   cin.tie(0);
   ios::sync_with_stdio(false);
   
-  int a; 
-  cin >> a;
+  string S;
+  cin >> S;
+
+  string E;
+  E = S[S.size()-1];
+
+  if(E != "s") cout << S << "s" << endl;
+  else cout << S << "es" << endl;
+
 
   return 0;
 }

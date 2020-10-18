@@ -17,12 +17,48 @@
 #define PRECISION(c,f) fixed << setprecision(c) << f
 using namespace std;
 
+bool IsPrime(ll num){
+  if (num < 2) return false;
+  else if (num == 2) return true;
+  else if (num % 2 == 0) return false; 
+
+  double sqrtNum = sqrt(num);
+  for (int i = 3; i <= sqrtNum; i += 2){
+    if (num % i == 0){
+      return false;
+    }
+  }
+  return true;
+}
+
+void ans(ll num, ll c){
+  if(num % c == 0)
+    cout << c << endl;
+  if(num == c+1) {
+    cout << num << endl;
+    return;
+  }
+  else return ans(num, c+1);
+}
+
 int main(){
   cin.tie(0);
   ios::sync_with_stdio(false);
   
-  int a; 
-  cin >> a;
+  ll N;
+  cin >> N;
+
+  if(IsPrime(N)){
+    cout << 1 << endl;
+    cout << N << endl;
+    return 0;
+ }
+
+  ans(N,1);
+//  FOR(i,1,N+1){
+//    if(N % i == 0)
+//      cout << i << endl;
+//  }
 
   return 0;
 }

@@ -21,8 +21,20 @@ int main(){
   cin.tie(0);
   ios::sync_with_stdio(false);
   
-  int a; 
-  cin >> a;
+  int N;
+  cin >> N;
+  int D1,D2;
+
+  int flag=0;
+  RIP(i,N){
+    cin >> D1 >> D2;
+    if(D1 == D2) flag++;
+    else flag=0;
+    if(flag == 3) break;
+  }
+
+  if(flag == 3) yes;
+  else no;
 
   return 0;
 }

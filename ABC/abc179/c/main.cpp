@@ -21,8 +21,22 @@ int main(){
   cin.tie(0);
   ios::sync_with_stdio(false);
   
-  int a; 
-  cin >> a;
+  int N;
+  cin >> N;
+
+  int a, b, c;
+  int ans=0;
+
+  RIP(i,N){
+    FOR(j,i+1,N){
+      a = i;
+      b = j;
+      c = N - (a*b);
+      if(N == a*b+c) ans++;
+    }
+  }
+
+  cout << ans << endl;
 
   return 0;
 }

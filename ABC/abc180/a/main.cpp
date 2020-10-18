@@ -21,8 +21,14 @@ int main(){
   cin.tie(0);
   ios::sync_with_stdio(false);
   
-  int a; 
-  cin >> a;
+  int N,A,B;
+  cin >> N >> A >> B;
+
+  int ans;
+
+  ans = N-A+B;
+
+  cout << ans << endl;
 
   return 0;
 }

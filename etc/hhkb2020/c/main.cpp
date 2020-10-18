@@ -21,8 +21,23 @@ int main(){
   cin.tie(0);
   ios::sync_with_stdio(false);
   
-  int a; 
-  cin >> a;
+  ll N;
+  cin >> N;
+  ll P;
+
+  ll min_num[300000]={0};
+  ll c=0;
+
+  RIP(i,N){
+    cin >> P;
+    min_num[P]=1;
+    if(P <= c){
+      FOR(j,c,N){
+        if(min_num[j]==0){c=j; break;}
+      }
+    }
+    cout << c << endl;
+  }
 
   return 0;
 }

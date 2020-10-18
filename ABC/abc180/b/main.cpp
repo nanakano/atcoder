@@ -21,8 +21,25 @@ int main(){
   cin.tie(0);
   ios::sync_with_stdio(false);
   
-  int a; 
-  cin >> a;
+  ll N;
+  cin >> N;
+  vector<ll> x;
+  ll xx;
+  RIP(i,N){cin >> xx; x.push_back(xx);}
+
+  ll a=0,c=x[0];
+  double b=0;
+
+  RIP(i,N){
+    a += abs(x[i]);
+    b += abs(x[i])*abs(x[i]);
+    if(c < abs(x[i])) c = abs(x[i]);
+  }
+  b = sqrt(b);
+
+  cout << a << endl;
+  cout << PRECISION(15,b) << endl;
+  cout << c << endl;
 
   return 0;
 }

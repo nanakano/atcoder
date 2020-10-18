@@ -21,8 +21,35 @@ int main(){
   cin.tie(0);
   ios::sync_with_stdio(false);
   
-  int a; 
-  cin >> a;
+/*
+  ll N;
+  cin >> N;
+  ll a;
+  vector<ll> vec;
+  ll min, max;
+  ll num;
+  ll c=0;
 
+  RIP(i,N){
+    cin >> a;
+    vec.push_back(a);
+  }
+
+  while(true){
+    min = *std::min_element(vec.begin(), vec.end());
+    max = *std::max_element(vec.begin(), vec.end());
+    if(min == max) break;
+    c++;
+    num = max-min;
+    RIP(i, N){
+      if(vec[i] == max){
+        vec[i] = num;
+      }
+    }
+  }
+
+  cout << vec[0] << endl;
+
+*/
   return 0;
 }

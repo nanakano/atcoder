@@ -21,8 +21,41 @@ int main(){
   cin.tie(0);
   ios::sync_with_stdio(false);
   
-  int a; 
-  cin >> a;
+  int H, W;
+  int S[100][100]={0};
+  cin >> H >> W;
+
+  char ss;
+  RIP(i,H){
+    RIP(j,W){
+      cin >> ss;
+      if(ss == '#') S[i][j]=1;
+    }
+  }
+
+  int ans=0;
+  bool c=false;
+
+  RIP(i,H){
+    RIP(j,W){
+      if(S[i][j] == 0 && !c) c=true;    
+      else if(S[i][j] == 0 && c) ans++;    
+      if(S[i][j] == 1) c=false;    
+    }
+    c=false;
+  }
+
+  c=false;
+  RIP(i,W){
+    RIP(j,H){
+      if(S[j][i] == 0 && !c) c=true;    
+      else if(S[j][i] == 0 && c) ans++;    
+      if(S[j][i] == 1) c=false;    
+    }
+    c=false;
+  }
+
+  cout << ans << endl;
 
   return 0;
 }

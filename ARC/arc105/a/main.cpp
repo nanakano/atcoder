@@ -21,8 +21,23 @@ int main(){
   cin.tie(0);
   ios::sync_with_stdio(false);
   
-  int a; 
-  cin >> a;
+  ll A,B,C,D;
+  cin >> A >> B >> C >> D;
+
+  bool ans=false;
+  if(A+B == C+D) ans=true;
+  else if(A+C == B+D) ans=true;
+  else if(A+D == B+C) ans=true;
+  else if(B+C == A+D) ans=true;
+  else if(B+D == A+C) ans=true;
+  else if(C+D == A+B) ans=true;
+  else if(A+B+C == D) ans=true;
+  else if(A+C+D == B) ans=true;
+  else if(A+C+D == C) ans=true;
+  else if(B+C+D == A) ans=true;
+
+  if(ans) yes;
+  else no;
 
   return 0;
 }
